@@ -5,7 +5,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.getElementById(targetId);
         if (target) {
             e.preventDefault();
-            const yOffset = -40;
+            const yOffset = -80;
             const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
