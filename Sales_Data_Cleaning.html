@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Data Cleaning – Doan Quoc Hung</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    main {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      color: var(--muted);
+    }
+
+    .breadcrumbs a {
+      border-bottom: 1px solid #ccc;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.97rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 0.5rem 0.7rem;
+      text-align: left;
+    }
+
+    th {
+      background: var(--card);
+    }
+
+    code,
+    pre {
+      background: #f6f6f6;
+      border-radius: 4px;
+      padding: 0.2em 0.4em;
+      font-size: 0.97em;
+    }
+
+    pre {
+      display: block;
+      padding: 1em;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-left"><a href="index.html">DOAN QUOC HUNG</a></div>
+    <div class="nav-actions">
+      <button id="theme-toggle">🌙</button>
+      <button id="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <div id="nav-menu" class="menu hidden">
+    <ul>
+      <li><a href="#about">🏠 Home</a></li>
+      <li><a href="projects.html">📁 Projects</a></li>
+      <li><a href="mailto:you@example.com">✉️ Email</a></li>
+      <li><a href="https://linkedin.com">👤 LinkedIn</a></li>
+      <li><a href="https://github.com">🐱 GitHub</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> → <a href="projects.html">Projects</a> → Sales Data Cleaning
+    </div>
+    <h1>🧹 Sales Data Cleaning with Python</h1>
+    <p>
+      This project demonstrates a Python-based approach to cleaning messy sales data using custom functions for field
+      normalization and validation. It prepares raw CSV data for accurate analysis and dashboarding.
+    </p>
+    <p>
+      This data was generated using Mockaroo, an AI tool that generates messy data for cleaning purposes. The data has
+      no meaning in analysing, as there would be no pattern, and it would be arbitrary should there be one.
+    </p>
+
+    <hr />
+
+    <h2>🧼 Data Cleaning Summary</h2>
+    <p>
+      <strong>Dataset:</strong> <code>raw_sales_data_sample.csv</code><br>
+      <strong>Objective:</strong> Clean key fields required for reliable customer and sales analysis. Non-relevant or
+      already-clean columns were excluded from transformation.
+    </p>
+
+    <hr />
+
+    <h2>🧾 Overview of Cleaned Columns</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Original Column</th>
+          <th>Issues Identified</th>
+          <th>Cleaning Action</th>
+          <th>Cleaned Column</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>Gender</code></td>
+          <td>Mixed casing, spelling errors, inconsistent labels (e.g., "femail", "M ")</td>
+          <td>Regex-based normalization to <code>M</code>, <code>F</code>; unknowns left blank</td>
+          <td><code>Gender_cleaned</code></td>
+        </tr>
+        <tr>
+          <td><code>Age</code></td>
+          <td>Leading zeroes, text-based numbers, out-of-range or missing values</td>
+          <td>Converted to numeric, kept values between 0–100, others set as <code>'n/a'</code></td>
+          <td><code>Age_cleaned</code></td>
+        </tr>
+        <tr>
+          <td><code>DOB</code>, <code>Order Date</code>, <code>Delivery Date</code>, <code>Signup Date</code></td>
+          <td>Multiple formats (MM/DD/YYYY, DD-MM-YYYY), invalid values</td>
+          <td>Parsed with format detection; invalid entries marked as <code>'n/a'</code></td>
+          <td><code>[column]_cleaned</code></td>
+        </tr>
+        <tr>
+          <td><code>Quantity Ordered</code></td>
+          <td>Numeric values embedded in text (e.g., "3 units", "004")</td>
+          <td>Extracted digits and converted to integer; invalids replaced with <code>'n/a'</code></td>
+          <td><code>Quantity_Ordered_cleaned</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <h2>🛠️ Cleaning Techniques Used</h2>
+    <ul>
+      <li><strong>String normalization</strong>: Lowercasing, trimming whitespace</li>
+      <li><strong>Regex pattern matching</strong>: To catch misspellings of gender labels</li>
+      <li><strong>Date parsing logic</strong>: Inferred date formats and validated ranges</li>
+      <li><strong>Numeric coercion</strong>: Force-converted text numbers, filtered invalids</li>
+      <li><strong>Invalid/missing handling</strong>: Marked as <code>'n/a'</code> or left blank as appropriate</li>
+    </ul>
+
+    <hr />
+
+    <h2>📤 Output</h2>
+    <p>
+      Cleaned dataset saved as:<br>
+      📁 <code>raw_sales_data_sample_cleaned.csv</code><br>
+      - Original columns retained<br>
+      - Cleaned versions appended for analysis<br>
+      - Ready for aggregation, filtering, and visual reporting
+    </p>
+
+    <hr />
+
+    <h2>🗂 Project Structure</h2>
+    <pre><code>.
+├── data/
+│   ├── raw_sales_data_sample.csv
+│   └── raw_sales_data_sample_cleaned.csv
+├── Data_Cleaner.py
+├── README.md
+├── .gitignore
+├── requirements.txt
+</code></pre>
+
+    <h2>🛠 What This Script Does</h2>
+    <ul>
+      <li>Cleans up inconsistent gender, age, and date formats</li>
+      <li>Detects and corrects swapped month/day values</li>
+      <li>Converts number words like <code>"twenty one"</code> into integers</li>
+      <li>Validates entries to ensure clean, analysis-ready output</li>
+    </ul>
+
+    <h2>📦 Requirements</h2>
+    <p>Install dependencies with:</p>
+    <pre><code>pip install -r requirements.txt</code></pre>
+
+    <h2>▶️ How to Run</h2>
+    <pre><code>python Data_Cleaner.py</code></pre>
+    <p>
+      Make sure the input CSV is placed in the correct path (or update the path in the script).
+    </p>
+
+    <hr />
+    <p><em>Note: All data used here is mock data, anonymized and for demonstration purposes only.</em></p>
+    <p>
+      <a href="https://github.com/hungdoan160796/sales-data-cleaning-project/" target="_blank" rel="noopener"
+        style="font-weight:600; color:var(--link-hover); text-decoration:underline;">
+        View on GitHub →
+      </a>
+    </p>
+    <button id="back-to-top" title="Go back to top">↑ Top</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
