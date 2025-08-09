@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Title – Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    main {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      color: var(--muted);
+    }
+
+    .breadcrumbs a {
+      border-bottom: 1px solid #ccc;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-left"><a href="index.html">DOAN QUOC HUNG</a></div>
+    <div class="nav-actions">
+      <button id="theme-toggle">🌙</button>
+      <button id="menu-toggle">☰</button>
+    </div>
+  </header>
+
+
+  <div id="nav-menu" class="menu hidden">
+    <ul>
+      <li><a href="#about">🏠 Home</a></li>
+      <li><a href="projects.html">📁 Projects</a></li>
+      <li><a href="mailto:you@example.com">✉️ Email</a></li>
+      <li><a href="https://linkedin.com">👤 LinkedIn</a></li>
+      <li><a href="https://github.com">🐱 GitHub</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> → <a href="projects.html">Projects</a> → Project Title
+    </div>
+
+    <h1>Project Title</h1>
+    <p class="muted">[Project subtitle or short summary]</p>
+
+    <h2>Background</h2>
+    <p>[Write about the context or motivation behind this project]</p>
+
+    <h2>Data & Methods</h2>
+    <p>[Explain where data came from, how it was analyzed, tools used]</p>
+    <img src="your-image-path.png" alt="project chart or screenshot" />
+
+    <h2>Key Findings</h2>
+    <p>[List key insights or conclusions here]</p>
+
+    <h2>Takeaways</h2>
+    <p>[Mention what you learned, what you'd improve, next steps]</p>
+    <button id="back-to-top" title="Go back to top">↑ Top</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

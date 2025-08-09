@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Title – Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    main {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      color: var(--muted);
+    }
+
+    .breadcrumbs a {
+      border-bottom: 1px solid #ccc;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-left"><a href="index.html">DOAN QUOC HUNG</a></div>
+    <div class="nav-actions">
+      <button id="theme-toggle">🌙</button>
+      <button id="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <div id="nav-menu" class="menu hidden">
+    <ul>
+      <li><a href="#about">🏠 Home</a></li>
+      <li><a href="projects.html">📁 Projects</a></li>
+      <li><a href="mailto:you@example.com">✉️ Email</a></li>
+      <li><a href="https://linkedin.com">👤 LinkedIn</a></li>
+      <li><a href="https://github.com">🐱 GitHub</a></li>
+    </ul>
+  </div>
+
+
+  <main>
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> → <a href="projects.html">Projects</a> → Iowa Liquor Sales Report 2021
+    </div>
+
+    <h2 id="executive-summary">Executive Summary</h2>
+
+    <p>This report looks into liquor sales over a twelve-month period in 2021, focusing on trends in
+      purchasing behavior, product preferences, vendor/store performance, and pricing sensitivity. Key findings
+      highlight revenue peaks in March and June, consistent mid-volume purchasing patterns, and strong brand
+      concentration within specific price ranges. Behavioral and operational recommendations are provided to optimize
+      future marketing, pricing, and stock strategies.</p>
+
+    <p>On a personal note for executives, it's utmost crucial to have data pipelining set up, as a first step to
+      marketing and strategies. Suggestions include, but not limited to, setting up customer accounts for coupons. </p>
+
+    <hr />
+
+    <h2 id="deep-dive">Deep-Dive</h2>
+
+    <p>This report presents an analysis of <strong>$428.12M</strong> in liquor sales across twelve months, aiming to
+      identify key performance trends, product behaviors, and consumer preferences. The following summarizes the most
+      significant findings:</p>
+
+    <ul>
+      <li>
+        <p><strong>Sales peaks occurred in March ($36.65M)</strong> and <strong>June ($38.89M)</strong>, correlating
+          with increased transaction volume (<strong>260K+ invoices</strong> per month). These peaks reflect heightened
+          demand periods rather than isolated high-value purchases.</p>
+      </li>
+      <li>
+        <p>On average, customers purchased <strong>11.9 bottles per invoice</strong>, with <strong>54.5%</strong> of
+          invoices containing between <strong>9–10.5 liters</strong> of alcohol. This points to a consistent
+          <strong>behavioral saturation threshold</strong>, where most customers appear to stop purchasing based on
+          volume rather than price. Recognizing this intuitive decision-making pattern enables tailored strategies such
+          as volume-based promotions, “just enough” bundle packs, and product groupings that align with natural consumer
+          limits.
+        </p>
+      </li>
+      <li>
+        <p>The <strong>top 10 SKUs</strong> includes Tito’s Handmade Vodka, Captain Morgan, and Fireball Cinnamon. These
+          products primarily fall within <strong>750mL–1.5L bottle sizes</strong> and <strong>packs of 6–12</strong>,
+          reinforcing a preference for mid-volume, value-oriented purchases.</p>
+      </li>
+      <li>
+        <p><strong>Median bottle price was $13.49</strong>, with the vast majority of units sold priced <strong>under
+            $50</strong>. Sales volume dropped noticeably above this price point, indicating clear price sensitivity
+          even without dynamic pricing data.</p>
+      </li>
+      <li>
+        <p><strong>Top 10 stores</strong> accounted for a dominant portion of total revenue, led by Hy-Vee #3, Central
+          City 2, and Costco. Meanwhile, vendors such as <strong>Diageo</strong>, <strong>Sazerac</strong>, and
+          <strong>Jim Beam Brands</strong> topped revenue rankings.
+        </p>
+      </li>
+      <li>
+        <p>Weekday transactions consistently outperformed weekend sales across all stores, suggesting habitual
+          purchasing behavior, possibly tied to restocking or pre-weekend planning cycles.</p>
+      </li>
+    </ul>
+
+    <p>The report concludes with operational recommendations based on observed customer behavior, pricing thresholds,
+      and product clustering. Further insight can be obtained by incorporating promotion data, inventory history, and
+      customer identifiers in future datasets.</p>
+
+    <h2 id="1-sales-trend-overview">1. Sales Trend Overview</h2>
+
+    <p>Total monthly sales demonstrated a steady upward trend from January to June, peaking in <strong>March
+        ($36.65M)</strong> and again in <strong>June ($38.89M)</strong>.</p>
+
+    <p>These surges align with corresponding increases in transaction volume, as evidenced by invoice counts, suggesting
+      heightened overall demand rather than changes in spending per transaction.</p>
+
+    <p>From June towards December, a plunge was observed in July considering June was the peak. Figures in sales went
+      gradually up towards December, while figures in invoice count experienced a dip in October, rising towards
+      December anyways.</p>
+
+    <p><img width="859" height="483" alt="Pasted image 20250807145103"
+        src="https://github.com/user-attachments/assets/ae1bddd6-986c-40df-bfa8-c8ab99b200be" /></p>
+
+    <p>Further analysis of sales distribution by days of the week reveals <strong>stronger performance during
+        weekdays</strong> compared to weekends. This consistent pattern throughout the months suggests habitual,
+      possibly pre-event or stock-up purchases, rather than spontaneous weekend buying behavior.</p>
+
+    <p><img width="871" height="492" alt="Pasted image 20250807145033"
+        src="https://github.com/user-attachments/assets/3fe6a462-e756-4a69-8b10-5bcdef44ec95" /></p>
+
+    <p>+<strong>Actions to take:</strong> Inventory planning and workforce scheduling should align with weekday demand
+      cycles and high-performing months. More specific insight regarding seasons and campaigns from sales required to
+      strategically plan discounts during peak seasons/holidays for next year.</p>
+
+    <hr />
+
+    <h2 id="2-product-preference-insights-behavioral-patterns">2. Product Preference Insights &amp; Behavioral Patterns
+    </h2>
+
+    <p>The majority of purchases occur within <strong>medium-range product sizes</strong>, specifically bottles between
+      <strong>750mL and 1.5L</strong>, sold in <strong>packs of 6–12</strong>. This indicates a dominant preference for
+      convenience-sized units that offer perceived value without excess.
+    </p>
+
+    <p>A secondary cluster of high sales volume is observed in <strong>1.75L bottle formats</strong>, with minimal
+      activity between <strong>1.25L and 1.5L</strong>. This indicates a <strong>bimodal consumer preference</strong>,
+      where buyers either opt for <strong>standard-sized formats</strong> (750–1000mL) or <strong>bulk-oriented
+        purchases</strong> (1.75L). Records of bulk-buyers should be looked into further to gain insight on the behavior
+      of this particular group.</p>
+
+    <p><img width="862" height="485" alt="Pasted image 20250807145505"
+        src="https://github.com/user-attachments/assets/11896a17-b67d-4a7e-83ed-8ff68cb5d172" /></p>
+
+    <p><strong>SKU-level analysis</strong> of top-performing products revealed that:</p>
+
+    <ul>
+      <li>
+        <p><strong>Tito’s Handmade Vodka</strong> remained a consistent leader in sales (~28%)</p>
+      </li>
+      <li>
+        <p>Products such as <strong>Black Velvet</strong>, <strong>Captain Morgan</strong>, and <strong>Fireball
+            Cinnamon</strong> also ranked among the top sellers</p>
+      </li>
+    </ul>
+
+    <p><img width="871" height="488" alt="Pasted image 20250807152909"
+        src="https://github.com/user-attachments/assets/8fc56524-83ed-4ef0-bcc8-87b15dee3563" /></p>
+
+    <p><strong>Purchasing volumes per invoice</strong> indicate strong clustering:</p>
+
+    <ul>
+      <li>
+        <p>54.5% of customers purchased <em>*9–10.5L *</em></p>
+      </li>
+      <li>
+        <p>15.27% purchased <strong>4.5L</strong></p>
+      </li>
+      <li>
+        <p>~30% purchased between <strong>750mL and 1.5L</strong></p>
+      </li>
+    </ul>
+
+    <p><img width="633" height="478" alt="Pasted image 20250807153803"
+        src="https://github.com/user-attachments/assets/1d8c1a89-4628-4623-bdb5-779b67bec144" /></p>
+
+    <p><strong>Interpretation:</strong></p>
+
+    <p>The product analysis reveals a <strong>clear pattern of consumer restraint</strong>, driven not just by price but
+      by perceived volume. While customers predominantly purchase <strong>750–1000mL bottles in packs of 6–12</strong>,
+      invoice-level data shows that <strong>over 54.5%</strong> of transactions total between <strong>9–10.5L</strong>
+      of alcohol. This suggests a <strong>behavioral saturation point</strong> — customers appear to stop purchasing
+      when they feel they’ve “reached enough,” regardless of additional options or deals available.</p>
+
+    <p>This volume-based heuristic is further supported by the scarcity of purchases beyond 10.5L, despite the
+      availability of larger packs or higher volumes. Such behavioral regularity offers a strategic opportunity to
+      design promotions, shelf arrangements, and product bundles that align with how customers <strong>intuitively
+        measure sufficiency</strong>, rather than relying solely on pricing incentives.</p>
+
+    <hr />
+
+    <h2 id="3-store-and-vendor-performance">3. Store and Vendor Performance</h2>
+
+    <h3 id="store-level-performance">🏪 Store-Level Performance</h3>
+
+    <p><img width="875" height="490" alt="Pasted image 20250807160654"
+        src="https://github.com/user-attachments/assets/413aaedb-4f3a-4d45-a622-1358a9c5b9f6" /></p>
+
+    <p>Sales analysis across key store locations indicates that performance is highly concentrated among a few dominant
+      outlets:</p>
+
+    <ul>
+      <li>
+        <p><strong>Central City 2</strong> led all locations with <strong>$12.10M in sales</strong>, contributing
+          <strong>32.18%</strong> of total tracked store revenue
+        </p>
+      </li>
+      <li>
+        <p><strong>Hy-Vee #3 / Des Moines</strong> followed closely at <strong>$12.26M</strong>, accounting for
+          <strong>29.41%</strong>
+        </p>
+      </li>
+      <li>
+        <p><strong>Costco Wholesale #788 / WDM</strong> contributed <strong>$4.70M</strong> (12.18%)</p>
+      </li>
+      <li>
+        <p>Remaining key contributors include:</p>
+
+        <ul>
+          <li>
+            <p><strong>Hy-Vee Wine and Spirits / Iowa City</strong> – $5.45M (15.86%)</p>
+          </li>
+          <li>
+            <p><strong>Wilkie Liquors</strong> – $4.01M (11.15%)</p>
+          </li>
+          <li>
+            <p><strong>Sam’s Club 8162 / Cedar Rapids</strong> – $3.69M (10.16%)</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>Monthly trends show:</p>
+
+    <ul>
+      <li>
+        <p><strong>Hy-Vee #3</strong> and <strong>Central City 2</strong> consistently drove monthly performance, with
+          <strong>notable surges in March, June, and December</strong>
+        </p>
+      </li>
+      <li>
+        <p><strong>Costco</strong> and <strong>Sam’s Club</strong> displayed seasonal variability, with higher
+          performance in mid-year months such as <strong>June and July</strong></p>
+      </li>
+      <li>
+        <p><strong>Wilkie Liquors</strong> and <strong>Benz Distributing</strong>, while lower in absolute sales,
+          maintained steady contributions across all months</p>
+      </li>
+    </ul>
+
+    <p><strong>Interpretation:</strong> The bulk of revenue is generated by just two locations, which together represent
+      <strong>over 60%</strong> of total store-linked sales in the dataset.
+    </p>
+
+    <p><strong>Recommendation:</strong></p>
+
+    <ul>
+      <li>
+        <p>Prioritize <strong>Central City 2</strong> and <strong>Hy-Vee #3</strong> for in-store promotions, new
+          product launches, and operational optimization</p>
+      </li>
+      <li>
+        <p>Investigate what differentiates these top performers (e.g., customer demographics, layout, stock variety) to
+          apply winning practices across other stores</p>
+      </li>
+      <li>
+        <p>Leverage <strong>Costco</strong> and <strong>Sam’s Club</strong> for targeted seasonal campaigns, especially
+          in Q2 and Q4 where sales increase</p>
+
+        <h3 id="brand-level-vendor-performance">🤝 Brand-Level Vendor Performance</h3>
+      </li>
+    </ul>
+
+    <p><img width="882" height="493" alt="Pasted image 20250807155515"
+        src="https://github.com/user-attachments/assets/5b2cb189-afb4-4606-bed3-325def8d6932" /></p>
+
+    <p>Analysis of sales by brand reveals that <strong>DIAGEO AMERICAS</strong> dominated with <strong>$84.71M in
+        sales</strong>, representing <strong>31.09%</strong> of total revenue. This was followed by:</p>
+
+    <ul>
+      <li>
+        <p><strong>SAZERAC COMPANY INC</strong> – $52.33M (19.21%)</p>
+      </li>
+      <li>
+        <p><strong>Jim Beam Brands</strong> – $32.05M (11.76%)</p>
+      </li>
+      <li>
+        <p><strong>Heaven Hill Brands</strong> – $27.02M (9.92%)</p>
+      </li>
+      <li>
+        <p><strong>PERNOD RICARD USA</strong> – $26.43M (9.70%)</p>
+      </li>
+      <li>
+        <p><strong>FIFTH GENERATION INC</strong> – $25.98M (9.54%)</p>
+      </li>
+      <li>
+        <p><strong>BACARDI USA INC</strong> – $23.90M (8.77%)</p>
+      </li>
+    </ul>
+
+    <p>Monthly breakdowns show that:</p>
+
+    <ul>
+      <li>
+        <p><strong>SAZERAC</strong> maintained steady performance across the year, often leading month-to-month</p>
+      </li>
+      <li>
+        <p><strong>DIAGEO</strong> surged strongly in the second half of the year</p>
+      </li>
+      <li>
+        <p>Other vendors (e.g., <strong>FIFTH GENERATION INC</strong>) showed intermittent spikes, contributing to
+          monthly peaks</p>
+      </li>
+    </ul>
+
+    <p>This distribution reflects both consistent vendor loyalty and brand-driven purchasing behavior.</p>
+
+    <p><strong>Recommendation:</strong> Strengthen partnerships with top 3 vendors (DIAGEO, SAZERAC, Jim Beam), who
+      together account for over <strong>60% of annual sales</strong>. Vendors showing seasonal surges may be candidates
+      for <strong>targeted promotions or product launches</strong> during key months.</p>
+
+    <hr />
+
+    <h2 id="4-pricing-behavior">4. Pricing Behavior</h2>
+
+    <p>Sales distribution across price ranges illustrates a clear concentration below the <strong>$50</strong>
+      threshold, with the <strong>$10–$30</strong> band accounting for the majority of units sold. The <strong>median
+        bottle price</strong> was <strong>$13.49</strong>, reinforcing the value-driven nature of purchasing behavior.
+    </p>
+
+    <p><img width="212" height="106" alt="Pasted image 20250807145850"
+        src="https://github.com/user-attachments/assets/20c20f6f-d3fa-49f8-ab69-f7edd56d1b2a" /></p>
+
+    <p><img width="873" height="496" alt="Pasted image 20250807145917"
+        src="https://github.com/user-attachments/assets/0d7799f1-9cff-4441-8b93-a86b6ae86bb3" /></p>
+
+    <p>While direct analysis of price elasticity was not feasible due to static pricing, customer sensitivity to price
+      ceilings is evident. Sales volume drops significantly past the $50 mark.</p>
+
+    <p><strong>Recommendation:</strong> Optimize pricing strategies by positioning products at psychologically appealing
+      thresholds (e.g., $39.99, $49.99), and consider volume-based pricing bundles that remain under $100.</p>
+
+    <hr />
+
+    <h2 id="5-data-gaps-and-future-recommendations">5. Data Gaps and Future Recommendations</h2>
+
+    <p>To expand analytical depth and enable more precise targeting, several data enhancements are recommended:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Customer-level IDs</strong></td>
+          <td>Track loyalty, purchase frequency, and segmentation</td>
+        </tr>
+        <tr>
+          <td><strong>Promotion/event flags</strong></td>
+          <td>Correlate sales peaks with external campaigns</td>
+        </tr>
+        <tr>
+          <td><strong>Inventory levels</strong></td>
+          <td>Evaluate sell-through rates and prevent stockouts</td>
+        </tr>
+        <tr>
+          <td><strong>Seasonal or event calendar</strong></td>
+          <td>Clarify causes of March and June peaks</td>
+        </tr>
+        <tr>
+          <td><strong>Dynamic pricing logs</strong></td>
+          <td>Enable price elasticity modeling and promo ROI analysis</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Next Step:</strong> Initiate tracking of promotion timelines, customer identifiers, and in-store
+      execution factors to unlock more actionable insights in future cycles.</p>
+
+    <button id="back-to-top" title="Go back to top">↑ Top</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
